@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link href="ShoppingCartpagecss/common.css" rel="stylesheet" type="text/css">
+	<link href="ShoppingCartpagecss/g-top.css" rel="stylesheet" type="text/css">
+	<link href="ShoppingCartpagecss/g-bd.css" rel="stylesheet" type="text/css">
+	<link href="fonticon/iconfont.js" type="text/javascript">
+	<link href="fonticon/iconfont.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+	<script type="text/javascript" src="js/jquery.tmpl.js" ></script>
+<title>购物车</title>
+	<style type="text/css">
+		
+	</style>
+</head>
+
+<body>
+	<!--	top开始-->
+	<div class="g-top clearbox">
+		<div class="g-top-left-logo fl">
+			<a href="index.html">
+				<img src="images/wegame-logo-40.776e17ff.png" alt="">
+			</a>
+		</div>
+		<ul class="g-top-middle-nav fl">
+			<li><a href="#">商店</a></li>
+			<li><a href="#">客户端</a></li>
+			<li><a href="#">移动端</a></li>
+			<li><a href="#">翼计划</a></li>
+			<li><a href="#">帮助反馈</a></li>
+		</ul>
+		<ul class="g-top-right-nav fr">
+			<li><a href="#">开发者平台</a></li>
+			<li><a href="#">下载客户端</a></li>
+			<li class="m-login"><img src="images/0.jpg" width="36" height="36" alt=""></li>
+		</ul>
+	</div>
+<!--	top结束-->
+<!--	bd开始-->
+	<div class="g-bd">
+<!--		title-->
+		<div class="m-title clearbox">
+			<p>商店精选</p>
+			<span class="iconfont icon-iconfontjiantou5"></span>
+			<p>购物车</p>
+		</div>
+<!--		content-->
+		<div class="m-content clearbox">
+			
+			<div class="m-content-top clearbox">
+				<h1 id="h1">共4款内容</h1>
+			</div>
+
+			<div class="m-content-middle clearbox">
+				<ul id="shopcar">
+					
+				</ul>
+				
+			</div>
+			
+			<script type="text/x-jquery-tmpl" id="shopcarinfo">
+				<li class="li">
+						<div class="m-content-middle-left fl">
+							<input type="checkbox" name="ckbx"/>
+							<img src="${smallimg}" width="130" height="72" alt="" />
+						</div>
+						
+						<div class="m-content-middle-middle fl">
+							<h3>${title}</h3>
+							<p>${publishdate}</p>
+						</div>
+						
+						<div class="m-content-middle-right fl">
+							<p class="price">&yen; ${price}</p>
+							<span>&yen; ${price}</span>
+						</div>
+						<span class="iconfont icon-lajitong fl del"></span>
+					</li>
+					
+			</script>
+			
+			<div class="m-content-bottom clearbox">
+				<div class="m-content-bottom-top">
+					<div class="m-content-bottom-top-left fl">
+						<span style="float: left;margin-left: 20px;">
+						<input type="checkbox" id="all" />
+						&nbsp;&nbsp;全选
+						</span>
+						<p>购买至：</p>
+						<img src="images/0.jpg" width="36" height="36" alt="" />
+						<p>秋色微凉爱</p>
+						<p>（QQ帐号：1290334730）</p>
+					</div>
+					<div class="m-content-bottom-top-right fr">
+						<span>0</span>
+						<p>款内容合计：</p>
+						<span>--</span>
+						<p>优惠：</p>
+						<span>--</span>
+						
+					</div>
+				</div>
+				<div class="m-content-bottom-bottom">
+					<div class="m-content-bottom-bottom-left fl">
+						<a href="#">您有0张代金券可用<span class="iconfont icon-iconfonticontrianglecopy"></span></a>
+					</div>
+					<div class="m-content-bottom-bottom-right fr">
+						<p >应付金额:</p>
+						<i>&yen;</i>
+						<span id="pay">0</span>
+						<a href="#" id="buybtn">确认购买</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		
+		$(function(){
+			var goodlist=JSON.parse(localStorage.getItem("shopcar14"))||[];
+			if(goodlist.length){
+				$("#shopcarinfo").tmpl(goodlist).appendTo("#shopcar");
+				console.log(goodlist)
+			}else{
+				alert("购物车为空")
+			}
+		})
+		
+	window.onload = function() {
+        var btn = document.getElementById("all");
+        btn.onclick = function() {
+            var flag = this.checked;
+            var items = document.getElementsByName("ckbx");
+            for (var i = 0; i < items.length; i++) {
+                items[i].checked = flag;//将所有item的状态设为全选按钮的状态
+            }
+            JieSuan();
+            pay();
+        }
+        
+        
+        var items = document.getElementsByName("ckbx");
+        //对每个item设置点击
+        function single(){
+        	  for (var i = 0; i < items.length; i++) {          
+                var number = 0;//记录选中的个数
+                for (var j = 0; j < items.length; j++) {
+                    if (items[j].checked) {
+                        number++;
+                    }
+                }              
+               document.getElementById("all").checked = (items.length == number);
+               JieSuan();
+               pay();                      
+        }  
+      }
+        for (var i = 0; i < items.length; i++) {
+            items[i].onclick = function() {
+            	 single();
+            }
+           }
+     
+        
+var prices=document.getElementsByClassName("price");
+        
+	function pay(){
+		  var sum=0;
+        for(var i=0; i<items.length;i++){       	
+        	if(items[i].checked){
+        		sum=sum+Number(prices[i].innerHTML.split(" ")[1]);	
+        	}
+        }
+        console.log(sum)
+        document.getElementById("pay").innerHTML=sum;
+	}
+	 
+	 
+
+var jiesuan=document.getElementById("buybtn");
+	 function JieSuan(){
+      
+        for(var k=0;k<items.length;k++){
+        	var item=items[k];
+        	if(item.checked){
+        		jiesuan.style.backgroundColor = "orange";
+        		
+        		break;
+        	}else{
+        		jiesuan.style.backgroundColor = "#ccc";
+        	}
+        }
+       
+       }
+	 
+	 
+//	$("#shopcar").on("click",".del",function(){
+//		alert(1)
+//	})
+//绑定事件必须是绑定在固定的节点上，可以是父亲、爷爷节点
+
+
+//单行删除
+		  for(var i=0;i<$(".del").length;i++){
+		  	(function(i){
+		  		$(".del").eq(i).click(function(){
+		  			var flag=window.confirm("是否删除此行")
+		  		
+		  			if(flag){
+		  				$(this).parent().remove();
+		  				pay();
+		  				JieSuan();
+		  				single();
+		  				 title();
+
+		  			}
+		  		})
+		  		
+		  	})(i);  
+		  	
+		  }
+		  
+		  function title(){
+		  	value=$(".li").length;
+		  	$("#h1").html("共"+value+"款内容");
+		  }
+		  title();
+}
+
+    
+			
+	</script>	
+<!--	bd结束-->
+</body>
+</html>

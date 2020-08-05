@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.js"></script>
+		
+	</head>
+
+	<body>
+		<div>
+			<table border="1" cellspacing="0" cellpadding="0" width="800">
+				<tbody id="content"></tbody>
+			</table>
+		</div>
+		
+		<script type="text/x-jquery-tmpl" id="info">
+		<tr>
+			<td>${id}</td>
+			<td>${name}</td>
+			<td>${age}
+				{{if age>=30}}
+				经验丰富
+				{{else age>=25}}
+				还行
+				{{else}}
+				继续努力
+				{{/if}}
+			</td>
+			<td>
+				<ul>
+					{{each skill}}
+					<li>
+						${sid},${name}
+					</li>
+					{{/each }}
+				</ul>
+			</td>
+		</tr>
+
+		</script>
+		
+		<script type="text/javascript">
+			 var obj=[
+			 {id:1,name:"user1",age:30,skill:[{sid:11,name:"web"},{sid:12,name:"web"}]},
+			  {id:2,name:"user1",age:25,skill:[{sid:12,name:"web"},{sid:13,name:"web"}]},
+			   {id:3,name:"user1",age:22,skill:[{sid:13,name:"web"},{sid:14,name:"web"}]}
+			 ]
+			 $("#info").tmpl(obj).appendTo("#content")
+		</script>
+
+	</body>
+
+</html>

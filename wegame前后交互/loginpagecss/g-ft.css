@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+
+.g-ft{
+	width: 100%;
+	height: 295px;
+	background-color: #191919;
+}
+
+.m-dl{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+.m-dl ul{
+	width: 1000px;
+	height: 100px;
+}
+
+.m-dl ul li {
+	height: 100px;
+	width: 320px;
+	float: left;
+}
+.m-dl ul li:first-of-type p:first-of-type{
+	font-size: 18px;
+	color: #ccc;
+	width: 120px;
+	float: left;
+}
+.m-dl ul li:first-of-type p:last-of-type{
+	font-size: 14px;
+	color: gray;
+	width: 40px;
+	height: 30px;
+	padding-top: 10px;
+	margin-left: 132px;
+	clear: left;
+}
+.m-dl ul li:first-of-type div{
+	width: 0;
+	height: 0;
+	border: 30px solid #ccc;
+	border-radius: 50%;
+	float: left;
+	position: relative;
+}
+
+.m-dl ul li:first-of-type div span{
+	position: absolute;
+	font-size: 50px;
+	top: -28px;
+	left: -25px;
+	
+}
+
+.m-dl ul li:nth-of-type(2) p:first-of-type{
+	font-size: 18px;
+	color: #ccc;
+	width: 120px;
+	float: left;
+}
+.m-dl ul li:nth-of-type(2) div{
+	width: 0;
+	height: 0;
+	border: 30px solid #ccc;
+	border-radius: 50%;
+	float: left;
+	position: relative;
+	margin-right: 5px;
+}
+.m-dl ul li:nth-of-type(2) div span:first-of-type{
+	position: absolute;
+	font-size: 50px;
+	top: -28px;
+	left: -25px;
+	
+}
+.m-dl ul li:nth-of-type(2) div:nth-of-type(2) .u-qr{
+	display: block;
+	width: 200px;
+	height: 200px;
+	background-image: url("../images/wechat-rcode.jpg");
+	background-repeat: no-repeat;
+	position: absolute;
+	top:-165px;
+	left: -60px;
+	display: none;
+}
+.m-dl ul li:nth-of-type(2) p:nth-of-type(2){
+	font-size: 14px;
+	color: gray;
+	width: 30px;
+	height: 30px;
+	padding-top: 10px;
+	margin-left: 132px;
+	clear: left;
+	float: left;
+}
+.m-dl ul li:nth-of-type(2) p:nth-of-type(3){
+	font-size: 14px;
+	color: gray;
+	width: 40px;
+	height: 30px;
+	padding-top: 10px;
+	margin-left: 35px;
+	float: left;
+}
+
+
+.m-dl ul li:last-of-type p:first-of-type{
+	font-size: 18px;
+	color: #ccc;
+	width: 120px;
+	float: left;
+}
+.m-dl ul li:last-of-type p{
+	color: gray;
+	
+}
+.m-dl ul li:last-of-type p span{
+	margin-right: 30px;
+}
+.m-dl ul li:last-of-type p:last-of-type{
+	clear: both;
+	margin-left: 120px;
+	margin-top: 10px;
+}
+
+
+.m-cprt{
+	margin: 0 auto;
+	width: 1000px;
+	height: 100px;
+}
+.m-cprt p{
+	width: 1000px;
+	height: 60px;
+	text-align: center;
+	color: gray;
+}
+
+.m-cprt p:first-of-type{
+	padding-top: 30px;
+}
+.m-cprt p:last-of-type{
+	height: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

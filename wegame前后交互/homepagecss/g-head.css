@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.g-head{
+			height: 55px;
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.g-head-left ul li{
+			float: left;
+/*			border: 1px solid;*/
+			width: 110px;
+			height: 55px;
+			line-height: 55px;
+			text-align: center;
+			font-size: 16px;
+		}
+		.g-head-left ul:first-of-type li:hover{
+			background-color: darkgray;
+		}
+		.g-head-left ul li:first-of-type{
+			width: 60px;
+			font-weight: bold;
+			position: relative;
+		}
+		.g-head-left ul li:first-of-type a{
+			display: block;
+			width: 60px;
+			height: 55px;
+		}
+		.g-head-left ul li:first-of-type span{
+			display: block;
+			border: 2px solid orange;
+			width: 30px;
+/*			margin: 0 auto;*/
+			position: absolute;
+			bottom: 2px;
+			left: 12px;
+		}
+		.g-head-left ul li:last-of-type a{
+			display: block;
+			width: 80px;
+		}
+		.g-head-left ul li:last-of-type{
+			position: relative;
+		}
+		.g-head-left ul li:last-of-type span:first-of-type{
+			top: -5px;
+			left: 60px;
+			color: red;
+		}
+		.g-head-left ul li:last-of-type span:last-of-type{
+			top: 2px;;
+			right: 5px;
+		}
+		.g-head-left ul li:last-of-type span{
+			display: block;
+			width: 30px;
+			position: absolute;
+		}
+		.g-head-left ul li:last-of-type ul{
+			width: 109px;
+			height: 220px;
+			border: 1px solid;
+			display: none;
+		}
+		.g-head-left ul li:last-of-type ul li{
+			width: 110px;
+			height: 55px;
+			text-align: left;
+			border: 0;
+			background-color: white;
+			
+		}
+		.g-head-left ul li:last-of-type ul li a:first-of-type{
+			font-weight: normal;
+		}
+		.g-head-left ul li:last-of-type ul li:first-child{
+			position: relative;
+		}
+		.g-head-left ul li:last-of-type ul li:first-child span{
+			border: 0;
+			position: absolute;
+			top: -5px;
+		}
+		.g-head-left ul li:last-of-type ul li a{
+			display: block;
+			width: 110px;
+			height: 55px;
+			padding-left: 15px;
+		}
+		.g-head-right{
+			width: 512px;
+			height: 55px;
+			position: relative;
+		}
+		.g-head-right ul li{
+			float: left;
+			width: 82px;
+			height: 55px;
+			line-height: 55px;
+			text-align: center;
+		}
+		.g-head-right ul li:first-child span{
+			padding-left: 5px;
+		}
+		.g-head-right ul li:nth-child(2) span{
+			padding-left: 10px;
+		}
+		.g-head-right ul li:last-child a{
+			color: orange;
+			font-weight: bolder;
+		}
+		.g-head-right input{
+			outline: none;
+			float: left;
+			border: 0;
+			border: 1px solid orange;
+			height: 30px;
+			border-radius: 15px;
+			margin-top: 10px;
+			margin-left: 30px;
+			width: 200px;
+		}
+		.g-head-right input::-webkit-input-placeholder {
+         	font-size: 12px;
+			position: relative;
+			left: 20px;
+     	}
+
+		.g-head-right .icon-sousu{
+			display: block;
+			width: 40px;
+			height: 30px;
+			position: absolute;
+			top: 11px;
+			right: 34px;
+			background-color: #FFE493;
+			text-align: center;
+			line-height: 30px;
+			font-weight: 900;
+			font-size: 22px;
+			border-radius: 0 15px  15px 0;
+		}
+		.g-head-right .icon-sousu:hover{
+			background-color: darkorange;
+		}

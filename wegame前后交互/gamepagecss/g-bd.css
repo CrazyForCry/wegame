@@ -1,0 +1,400 @@
+.g-bd{
+	width: 1005px;
+	height: 1700px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+/*ad*/
+.m-ad{
+	width: 1005px;
+	height: 475px;
+	
+}
+.m-ad-left{
+	width: 705px;
+	height: 400px;
+}
+.m-ad-left-top{
+	width: 705px;
+	height: 400px;
+}
+.m-ad-left-bottom{
+	width: 705px;
+	height: 75px;
+	background-color: #212121;
+}
+.m-ad-left-bottom span{
+	display: block;
+	width: 30px;
+	margin-top: 10px;
+	font-size: 16px;
+	text-align: center;
+	height: 52px;
+	line-height: 52px;
+	color: gray;
+	
+}
+.m-ad-left-bottom ul{
+	float: left;
+	width: 640px;
+	height: 52px;
+	
+	
+}
+.m-ad-left-bottom ul li{
+	float: left;
+	width: 100px;
+	height: 60px;
+	margin-right: 8px;
+	margin-top: 5px;
+	
+}
+.m-ad-left-bottom ul li:last-of-type{
+	margin-right: 0;
+}
+.m-ad-right{
+	width: 300px;
+	height: 475px;
+	background-color: #fff;
+}
+
+.m-ad-right table{
+	margin-left: 20px;
+	margin-top: 20px;
+	color: gray;
+}
+.m-ad-right table tr td:last-of-type{
+	padding-left: 10px;
+}
+.m-ad-right table tr:nth-of-type(3) td:last-of-type{
+	color: black;
+}
+.m-ad-right table tr:nth-of-type(3) td:last-of-type::after{
+	content: "";
+	display: block;
+	border-bottom: 2px dashed #ccc;
+	width: 48px;
+	
+}
+.m-ad-right p {
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #ccc;
+	float: left;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.m-ad-right p:first-of-type{
+	border: 1px solid #ccc;
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.m-ad-right p:nth-of-type(5) {
+	border: 1px solid #ccc;
+	float: left;
+	width: 35px;
+	height: 30px;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 170px;
+}
+
+.m-ad-right a{
+	clear: both;
+	display: block;
+	margin: 0 auto;
+	width: 260px;
+	height: 45px;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	line-height: 45px;
+	font-weight: 900;
+	background-color: #3B9CFF;
+}
+
+
+/*content*/
+
+.m-content{
+	
+	width: 1005px;
+	margin: 0 auto;
+	height: 1200px;
+	margin-top: 20px;
+}
+
+/*游戏详情*/
+.m-content-left{
+	width: 705px;
+	height: 1200px;
+	
+}
+.m-tt{
+	font-weight: normal;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.m-introduction{
+	width:703px;
+	height:305px;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+.m-introduction p{
+	margin-top: 20px;
+	margin-left: 20px;
+	font-size: 14px;
+}
+.m-introduction p:first-of-type{
+	padding-top: 20px;
+	margin-top: 0;
+}
+.m-introduction h4{
+	margin-left: 20px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.m-introduction p:last-of-type{
+	width: 660px;
+	margin-bottom: 10px;
+}
+.u-hide{
+	display: block;
+	position: absolute;
+	text-align: center;
+	font-size: 16px;
+	width: 700px;
+	height: 100px;
+	line-height: 180px;
+	bottom:0px;
+	background-image: linear-gradient(to top, white , transparent);
+	z-index: 99;
+}
+.m-introduction span:last-of-type{
+	position: absolute;
+	left:385px;
+	bottom: 0;
+	color: black;
+	font-weight: 900;
+	font-size: 10px;
+	z-index: 999;
+}
+.m-content-right{
+	height: 1200px;
+	width: 285px;
+}
+.panel{
+	width: 285px;
+	height: 272px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.panel h2{
+	padding-top: 20px;
+	padding-left: 20px;
+	font-weight: normal;
+}
+.panel table{
+	margin-top: 20px;
+	margin-left: 20px;
+	
+}
+.panel table tr{
+	height: 30px;
+}
+.panel:first-of-type table tr td span{
+	color: #F9B154;
+}
+.panel:first-of-type table tr td:last-of-type{
+	color: gray;
+}
+.panel:nth-of-type(2) table tr td:first-of-type{
+	width: 80px;
+	height: 30px;
+}
+.panel:nth-of-type(2) table tr td:last-of-type{
+	width: 140px;
+	height: 30px;
+}
+.panel table tr td:last-of-type{
+	padding-left: 10px;
+}
+.panel:nth-of-type(3){
+	height:230px; 
+}
+.panel:nth-of-type(3) table tr td:first-of-type{
+	color: gray;
+}
+.panel:last-of-type{
+	height: 200px;
+}
+
+.panel:last-of-type p{
+	margin-left: 20px;
+	margin-top: 20px;
+	color: gray;
+}
+.panel:last-of-type a{
+	margin-left: 20px;
+	display: block;
+	margin-top: 5px;
+	color: gray;
+}
+.panel:last-of-type p:last-of-type{
+	margin-top: 5px;
+}
+
+.m-content-left .u-tips{
+	margin-top: 20px;
+	border: 1px solid gray;
+	display: block;
+	width: 70px;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	
+}
+/*更新与活动*/
+.m-hot{
+	width: 703px;
+	height: 148px;
+	background-color: #fff;
+	margin-bottom: 20px;
+}
+.m-hot-left{
+	width: 195px;
+	height: 148px;
+}
+.m-hot-left a{
+	display: block;
+	width:161px;
+	height:107px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.m-hot-right{
+	height: 148px;
+	width: 505px;
+}
+.m-hot-right h4{
+	padding-top: 10px;
+	font-size: 14px;
+}
+.m-hot-right p:first-of-type{
+	margin-top: 10px;
+	width: 460px;
+	font-size: 14px;
+}
+.m-hot-right span{
+	float: left;
+	margin-top: 25px;
+	color: gray;
+}
+.m-hot-right p:nth-of-type(2){
+	width: 40px;
+	height: 20px;
+	margin-left: 10px;
+	margin-top: 25px;
+	float: left;
+}
+.m-hot-right p:last-of-type{
+	width: 200px;
+	height: 20px;
+	float: right;
+	margin-top: 25px;
+}
+
+
+/*
+<h2 class="m-tt fl clearbox">用户评测</h2>
+				<p class="fl">您的声音对我们至关重要</p>
+				<div class="m-chat clearbox">
+					<div class="m-chat-left fl">
+						<h3>应游戏运营方要求，该游戏不展示评测内容</h3>
+						<p>下载掌上WeGame，随时参与社区互动</p>
+					</div>
+					<div class="m-chat-right fr">
+						<a href="#"><img src="images/下载.png" alt=""></a>
+						<h3>下载掌上WeGame</h3>
+						<p>发现更大的游戏世界</p>
+					</div>
+				</div>
+*/
+.m-content-left p:nth-child(9){
+	color: gray;
+	margin-top: 25px;
+	margin-left: 20px;
+}
+.m-chat{
+	width: 703px;
+	height: 188px;
+	background-color: #fff;
+}
+.m-chat-left{
+	width: 490px;
+	height: 188px;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+}
+.m-chat-left h3{
+	font-size: 18px;
+	padding-top: 70px;
+	
+}
+.m-chat-left::after{
+	content: "";
+    background-image: url("../images/widget-discuss-close-bg.9c85e663.png");
+	background-repeat: no-repeat;
+    width: 135px;
+    height: 131px;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    z-index: -1;
+}
+.m-chat-left p{
+	font-size: 14px;
+	color: gray;
+	line-height: normal;
+}
+.m-chat-right{
+	width: 210px;
+	height: 188px;
+	text-align: center;
+	margin-top: 30px;
+	position: relative;
+}
+.m-chat-right::before{
+	content: "";
+	border-left: 1px solid #ccc;
+	position: absolute;
+	height: 140px;
+	left: 0;
+	
+}
+.m-chat-right p{
+	color: #F69C00;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
